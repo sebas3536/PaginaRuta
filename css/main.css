@@ -27,6 +27,8 @@ html {
 /*colocar una imagem de fondo y hacer scroll down de las imagenes y colocar un video en la parte principal
 apartado de contacto (cidad, nombre completo, telefono, correo)*/
 body {
+  /*background-image: url(/img/bowl.png);*/
+  background-image: url(bowl.png);
   -webkit-perspective: 800px;
   perspective: 800px;
   min-height: 100vh;
@@ -34,8 +36,7 @@ body {
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
-  transition: background 0.5s ease-in-out;
-  background-image: url(/img/bowl.jpg);
+  transition: 0.5s ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
   height: 20em;
