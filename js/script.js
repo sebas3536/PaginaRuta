@@ -40,11 +40,11 @@ class Accordion{
     });
 
     this.animation.onfinish = () => {
-      this.expandIcon.setAttribute('src', 'images/plus.svg');
+      this.expandIcon.setAttribute('src', 'img/plus.svg');
       return this.onAnimationFinish(false);
     }
     this.animation.oncancel = () => {
-      this.expandIcon.setAttribute('src', 'images/plus.svg');
+      this.expandIcon.setAttribute('src', 'img/plus.svg');
       return this.isClosing = false;
     }
   }
@@ -76,7 +76,7 @@ class Accordion{
     this.animation.onfinish = () => {
       this.expandIcon.setAttribute(
           'src',
-          'images/minus.svg'
+          'img/minus.svg'
       );
       return this.onAnimationFinish(true);
     }

@@ -26,27 +26,6 @@ html {
 
 /*colocar una imagem de fondo y hacer scroll down de las imagenes y colocar un video en la parte principal
 apartado de contacto (cidad, nombre completo, telefono, correo)*/
-body {
-  /*background-image: url(/img/bowl.png);*/
-  background-image: url(bowl.png);
-  -webkit-perspective: 800px;
-  perspective: 800px;
-  min-height: 100vh;
-  font-size: 14px;
-  align-items: center;
-  justify-content: center;
-  background-attachment: fixed;
-  transition: 0.5s ease-in-out;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 20em;
-}
-
-.container {
-  max-width: 1068px;
-  margin: auto;
-  width: 100%;
-}
 
 /* Header */
 header {
@@ -58,77 +37,189 @@ header {
 }
 
 header.shadow {
-  background-color: var(--bg-color);
+  background-color: #25d366;
   box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
-header.shadow .logo {
-  color: var(--text-color);
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 27px;
+  left: 40rem;
+}
+
+
+nav a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--bg-color);
+  top: 100%;
+  animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+nav a:hover:before {
+  animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes in {
+  0% {
+    width: 0;
+    left: 0;
+    right: auto;
+  }
+
+  100% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+@keyframes out {
+  0% {
+    width: 100%;
+    left: auto;
+    right: 0;
+  }
+
+  100% {
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}) {
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 8px 0;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--bg-color);
+
+.titulo {
+  width: 10rem;
+  position: relative;
+  top: 7px;
+  left: 46px;
+  /* color: #fff; */
+  letter-spacing: 3.5px;
+  font-size: 2rem;
+  color: #ffffff;
+  size: ledger;
 }
 
-.logo span {
-  color: var(--second-color);
+
+
+.thx {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
 }
 
-.login {
-  padding: 8px 14px;
-  text-transform: uppercase;
-  font-weight: 500;
-  border-radius: 4px;
-  background: var(--second-color);
-  color: var(--bg-color);
+/*slider*/
+/****************************/
+div#slider {
+  
+  position: absolute;
+  overflow: hidden;
 }
 
-.login:hover {
-  background: hsl(24, 98%, 58%);
-  transition: 0.3s;
+/* las imágenes no van a salir del márgen de la pantalla*/
+div#slider figure img {
+  width: 10%;
+  float: left;
+  background-position: center;
 }
 
+div#slider figure {
+  z-index: -1;
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+  /*el movimiento se va a mantener de forma indefinida -infinito-*/
+}
+
+/*esta parte del código define el movimiento de las imágenes a la izquierda*/
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+}
+.video{
+  position: relative;
+  right: 5rem;
+  top: .15rem;
+}
 
 /*main*/
-.svg-shape {
-  position: absolute;
-  z-index: -1;
-  width: 850px;
-  height: 850px;
-  left: 450px;
-  opacity: 65%;
-}
-
-.svg-shape path {
-  fill: #18808A;
-}
-
-.svg-shape2 {
-  position: absolute;
-  z-index: -1;
-  width: 800px;
-  height: 800px;
-  left: -180px;
-  opacity: 65%;
-}
-
-.svg-shape2 path {
-  fill: #E8A9BA;
-}
 
 main {
+  
   position: relative;
-  width: calc(min(90rem, 90%));
+  width: 100%;
   margin: auto auto;
   min-height: 100vh;
   column-gap: 3rem;
@@ -143,44 +234,53 @@ main {
   opacity: 0;
 }
 
+/*
 main>div span {
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 1rem;
+  letter-spacing: 3.5px;
+  font-size: 2rem;
   color: #ffffff;
+  size: ledger;
+  left: 3rem;
+  position: relative;
 }
-
+*/
 main>div h1 {
+  position: relative;
   text-transform: capitalize;
   letter-spacing: 0.8px;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
-  background-color: var(--second-color);
-  background-image: linear-gradient(45deg, var(--second-color), var(--container-color));
+  background-color: var(--bg-color);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  left: 42px;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
 
 main>div hr {
   display: block;
-  background: var(--container-color);
+  background: #ffffff;
   height: 0.25rem;
-  width: 6.25rem;
+  width: 33.25rem;
   border: none;
-  margin: 1.125rem 0 1.875rem 0;
+  position: relative;
+  left: 3rem;
 }
 
 main>div p {
   line-height: 1.6;
   text-align: justify;
-  font-size: 15px;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--bg-color);
+  left: 3rem;
+  position: relative;
+  width: 28rem;
 }
 
 main a {
@@ -195,9 +295,12 @@ main a {
 }
 
 main>div>a {
+  position: relative;
   border: 2px solid #c2c2c2;
-  margin-top: 2.188rem;
+  /* margin-top: 2.188rem; */
   padding: 0.625rem 1.875rem;
+  top: 1rem;
+  left: 3rem;
 }
 
 main>div>a:hover {
@@ -207,7 +310,10 @@ main>div>a:hover {
 
 /****************************/
 .section2 {
-  /* background-color: rgb(249, 249, 249);*/
+  position: relative;
+  top: 1rem;
+  background-image: url("/img/Diseño1.png");
+  /*background-repeat: repeat;*/
   height: 670px;
   align-items: center;
 }
@@ -221,17 +327,21 @@ main>div>a:hover {
 .section_titulo p {
   text-align: center;
   font-size: 24px;
-  color: #ffffff;
+  color: #000000;
   font-size: xx-large;
   font-family: fantasy;
+  position: relative;
+  top: 2.5rem;
 }
 
 .section_titulo h3 {
   text-align: center;
-  font-size: 24px;
-  color: #ffffff;
+  font-size: 30px;
+  color: #000000;
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 3rem;
 }
 
 .wrapper {
@@ -272,7 +382,6 @@ main>div>a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   transition: .3s;
 }
 
@@ -305,7 +414,7 @@ main>div>a:hover {
   backdrop-filter: blur(16px) saturate(120%);
   transition: .3s;
   color: #fff;
-  z-index: 2;
+  
 }
 
 .card:hover .details {
@@ -394,20 +503,25 @@ main>div>a:hover {
   height: 100%;
 }
 
+/*section3*/
 /************************/
 .opinions-section {
+  background-image: url(bowl.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 40px;
-  /* background-color: rgb(248, 248, 248
-  );*/
 }
 
 .section-title {
+  bottom: -5rem;
   font-size: 24px;
-
   color: #ffffff;
   font-size: xx-large;
   font-family: fantasy;
-  text-align: justify;
+  text-align: center;
+  position: relative;
 }
 
 .opinions-container {
@@ -417,9 +531,10 @@ main>div>a:hover {
 }
 
 .opinion-card {
+  opacity: 70%;
   width: 300px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 23px;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -443,6 +558,7 @@ main>div>a:hover {
 }
 
 .opinion-text {
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -451,6 +567,11 @@ main>div>a:hover {
 /* Estilos para la sección de Contacto */
 .contact-section {
   padding: 40px;
+  background-image: url(/img/WC.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .contact-section p {
@@ -610,19 +731,25 @@ menu li {
 }
 
 /****************************************/
+
 .section4 h3 {
+  position: relative;
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #000000;
   font-size: xx-large;
   font-family: fantasy;
+  top: 1rem;
 }
 
 .faq-container {
+  background-image: url("/img/Diseño1.png");
   display: flex;
   flex-direction: column;
   gap: 16px;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 details {
@@ -721,6 +848,8 @@ summary:hover .expand-icon {
 /*media*/
 @media screen and (min-width: 48rem) {
   main {
+    z-index: 1;
+    position: relative;
     display: flex;
     align-items: center;
   }
@@ -744,43 +873,48 @@ summary:hover .expand-icon {
 @media screen and (min-width: 1000px) {}
 
 @media screen and (max-width: 780px) {
-  .nav{
+  .nav {
     justify-content: space-around;
   }
-  main>div h1{
+
+  main>div h1 {
     text-align: center;
   }
-  main>div span{
-    margin: 10px;
-  }
-  main>div hr{
+  
+  main>div hr {
     border-radius: 10px;
     background: #ffffff;
     width: 650px;
   }
-  main>div p{
+
+  main>div p {
     margin: -19px;
     text-align: center;
   }
-  main>div>a{
+
+  main>div>a {
     margin-left: 180px;
     margin-bottom: 10px;
   }
+
   .svg-shape {
     width: 0px;
     height: 0px;
   }
+
   .svg-shape2 {
     width: 0px;
     height: 0px;
   }
-  .section2{
+
+  .section2 {
     display: contents;
   }
-  .footer-top-wrapper{
+
+  .footer-top-wrapper {
     flex-direction: column;
   }
-  .float{
-    
-  }
+
+  .float {}
 }
+

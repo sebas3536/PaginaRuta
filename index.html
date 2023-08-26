@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- Enlazar CSS Floating WhatsApp -->
-    <link rel="stylesheet"
-        href="https://rawcdn.githack.com/jerfeson/floating-whatsapp/0310b4cd88e9e55dc637d1466670da26b645ae49/floating-wpp.min.css">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
@@ -23,18 +22,21 @@
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
-        <!-- Nav -->
-        <div class="nav container">
-            <!-- Logo -->
-            <a href="#" class="logo">Ruta <span>Fit</span></a>
-            <!--Login Btn-->
-            <a href="Blog.html" class="login">Blog</a>
+        <div class="nav">
+            <h1 class="titulo">Ruta Fit</h1>
         </div>
+        <div class=" nav"></div>
+        <nav>
+            <a href="Blog.html">Blog</a>
+            <a href="#destacados">Productos</a>
+            <a href="#Opiniones">Opiniones</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#Contact">Contactos</a>
+        </nav>
     </header>
-
-    <div id="WABoton"></div>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a id="WABoton"
@@ -43,13 +45,27 @@
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 
+
     <!-- partial:index.partial.html -->
+    <section class="slider">
+        <div id="slider">
+            <figure>
+                <img src="img/WC.jpg" alt="">
+                <img src="img/SJ.jpg" alt="">
+                <img src="img/MC.jpg" alt="">
+                <img src="img/WA.jpg" alt="">
+                <img src="img/EN.jpg" alt="">
+                <img src="img/bowl.png" alt="">
+            </figure>
+        </div>
+
+    </section>
     <main>
         <div>
-            <span>Ruta Fit</span>
             <h1>Franquicia en crecimiento</h1>
             <hr>
-            <p>Beauty and mystery are hidden under the sea. Explore with our application to know about Aquatic Animals.
+            <p>Beauty and mystery are hidden under the sea. Explore with our application to know about Aquatic
+                Animals.
             </p>
             <a href="#Contact">Contacta Con Nosotros</a>
         </div>
@@ -59,25 +75,9 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>
-
-        <div class="svg-shape">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M26,-39.2C33.6,-35.5,39.7,-28.2,41.2,-20.2C42.7,-12.2,39.5,-3.5,42.7,9.3C45.8,22.2,55.3,39.2,53.3,52.1C51.3,65.1,37.9,74.2,25.5,70.3C13.1,66.5,1.7,49.7,-11.1,43.4C-23.8,37,-38,41.1,-52.1,37.9C-66.2,34.6,-80.4,24.1,-79.6,13C-78.9,1.8,-63.2,-10,-55,-24C-46.8,-38,-46.1,-54.2,-38.1,-57.7C-30.2,-61.2,-15.1,-52,-3,-47.4C9.2,-42.8,18.3,-42.8,26,-39.2Z"
-                    transform="translate(100 100)" />
-            </svg>
-        </div>
-        <div class="svg-shape2">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M44.4,-63.7C56.3,-61.5,63.8,-47,64.5,-33.1C65.1,-19.2,59,-5.8,50.3,2.4C41.6,10.6,30.5,13.7,25.2,24.2C19.8,34.8,20.3,52.8,13.5,62C6.8,71.3,-7.2,71.8,-15.5,64.2C-23.8,56.6,-26.5,40.9,-33.6,30.4C-40.7,19.9,-52.4,14.5,-56.9,6.1C-61.3,-2.4,-58.6,-13.9,-50.2,-19C-41.8,-24,-27.7,-22.6,-18.4,-26C-9,-29.5,-4.5,-37.9,5.9,-47C16.3,-56.1,32.5,-66,44.4,-63.7Z"
-                    transform="translate(100 100)" />
-            </svg>
-        </div>
-
     </main>
     <!-- Section 2 -->
-    <section class="section2">
+    <section id="destacados" class="section2">
         <div class="section_titulo">
             <p>Productos destacados</p>
             <h3>Busquemos y recorramos juntos el mundo de la comida saludable a traves de ruta
@@ -104,8 +104,8 @@
                         <span class="tag">Indie</span>
                     </div>
                     <p class="desc">
-                        Marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search for
-                        meaning.
+                        Marco, a disillusioned backpacker in his late 20s, embarks on a solitary journey in search
+                        for meaning.
                     </p>
                     <div class="cast">
                         <h3>Cast</h3>
@@ -174,7 +174,8 @@
                         <span class="tag blue">Drama</span>
                     </div>
                     <p class="desc">
-                        Alex and his best friend goes on a road trip whilst experiencing friendship, self-discovery, and
+                        Alex and his best friend goes on a road trip whilst experiencing friendship, self-discovery,
+                        and
                         the
                         bittersweet transition to adulthood.
                     </p>
@@ -192,7 +193,7 @@
         </div>
     </section>
     <!-- Section 3 -->
-    <section class="opinions-section">
+    <section id="Opiniones" class="opinions-section">
         <div class="opinions-container">
             <h3 class="section-title">Opiniones de nuestros clientes</h3>
             <div class="opinion-card">
@@ -200,7 +201,8 @@
                     <img src="img/TW.png" alt="Cliente 1" class="client-image">
                     <h3 class="client-name">Nombre del Cliente</h3>
                 </div>
-                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a ante
+                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a
+                    ante
                     varius posuere. Fusce tincidunt pharetra dolor, in blandit quam convallis quis.</p>
             </div>
             <div class="opinion-card">
@@ -208,7 +210,8 @@
                     <img src="img/WA.jpg" alt="Cliente 2" class="client-image">
                     <h3 class="client-name">Nombre del Cliente</h3>
                 </div>
-                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a ante
+                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a
+                    ante
                     varius posuere. Fusce tincidunt pharetra dolor, in blandit quam convallis quis.</p>
             </div>
             <div class="opinion-card">
@@ -216,7 +219,8 @@
                     <img src="img/bowl.png" alt="Cliente 3" class="client-image">
                     <h3 class="client-name">Nombre del Cliente</h3>
                 </div>
-                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a ante
+                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a
+                    ante
                     varius posuere. Fusce tincidunt pharetra dolor, in blandit quam convallis quis.</p>
             </div>
             <div class="opinion-card">
@@ -224,19 +228,28 @@
                     <img src="img/bowl.png" alt="Cliente 3" class="client-image">
                     <h3 class="client-name">Nombre del Cliente</h3>
                 </div>
-                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a ante
+                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a
+                    ante
                     varius posuere. Fusce tincidunt pharetra dolor, in blandit quam convallis quis.</p>
             </div>
+            <div class="opinion-card">
+                <div class="opinion-card-header">
+                    <img src="img/bowl.png" alt="Cliente 3" class="client-image">
+                    <h3 class="client-name">Nombre del Cliente</h3>
+                </div>
+                <p class="opinion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum a
+                    ante
+                    varius posuere. Fusce tincidunt pharetra dolor, in blandit quam convallis quis.</p>
+            </div>
+
         </div>
     </section>
 
-
-
     <!--seccion 4 -->
+    <section id="preguntas" class="section4">
 
-    <section class="section4">
-        <h3>Preguntas Frecuentes</h3>
         <div class="faq-container">
+            <h3>Preguntas Frecuentes</h3>
             <details>
                 <summary>
                     <span class="faq-title">
@@ -265,10 +278,13 @@
                     <img src="img/plus.svg" class="expand-icon" />
                 </summary>
                 <div class="faq-content">The key aspect is that this course provides a clear overview of the whole
-                    design process and principles, that represent necessary information for being successful within the
-                    industry. You will also get direct support from the author of this course, who is ready to answer
+                    design process and principles, that represent necessary information for being successful within
+                    the
+                    industry. You will also get direct support from the author of this course, who is ready to
+                    answer
                     all your questions and care about your next steps. Last but not least is the fact, that it's not
-                    only about video content, but you will also get access to the unique database of design resources
+                    only about video content, but you will also get access to the unique database of design
+                    resources
                     and special offers from the partners of the course.</div>
             </details>
             <details>
@@ -396,30 +412,10 @@
 </script>
 <!-- JavaScript -->
 <script src="js/script.js"></script>
-<!-- Enlazar JS Floating WhatsApp -->
-<script type="text/javascript"
-    src="https://rawcdn.githack.com/jerfeson/floating-whatsapp/0310b4cd88e9e55dc637d1466670da26b645ae49/floating-wpp.min.js"></script>
-<!-- Inicializar librería Floating WhatsApp  -->
-<script>
-    jQuery(document).ready(function ($) {
-        $('#WABoton').floatingWhatsApp({
-            phone: '+009876543210', // Número WhatsApp Business
-            popupMessage: 'Hola 👋 ¿Cómo podemos ayudarte?', // Mensaje pop up
-            message: "Hola John...", // Mensaje por defecto
-            showPopup: true, // Habilita el pop up
-            headerTitle: 'WhatsApp Chat', // Título del header
-            headerColor: '#25D366', // Color del header
-            buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', // Icono WhatsApp
-            size: '72px', // Tamaño del icono
-            //backgroundColor: '#00000', // Color de fondo del botón
-            position: "right", // Posición del icono
-            avatar: 'https://www.w3schools.com/howto/img_avatar.png', // URL imagen avatar
-            avatarName: 'John Doe', // Nombre del avatar
-            avatarRole: 'Soporte', // Rol del avatar
-            //autoOpenTimeout: 3000,
-            zIndex: '99999',
-        });
-    });
-</script>
+<!-- JQery link -->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+<!--Link to JS-->
+<script src="js/scriptBlog.js"></script>
 
 </html>
