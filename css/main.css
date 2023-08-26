@@ -312,7 +312,7 @@ main>div>a:hover {
 .section2 {
   position: relative;
   top: 1rem;
-  background-image: url("/img/Diseño1.png");
+  background-image: url("Diseño1.png");
   /*background-repeat: repeat;*/
   height: 670px;
   align-items: center;
@@ -567,7 +567,7 @@ main>div>a:hover {
 /* Estilos para la sección de Contacto */
 .contact-section {
   padding: 40px;
-  background-image: url(/img/WC.jpg);
+  background-image: url(WC.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -744,7 +744,7 @@ menu li {
 }
 
 .faq-container {
-  background-image: url("/img/Diseño1.png");
+  background-image: url("Diseño1.png");
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -880,7 +880,7 @@ summary:hover .expand-icon {
   main>div h1 {
     text-align: center;
   }
-  
+
   main>div hr {
     border-radius: 10px;
     background: #ffffff;
