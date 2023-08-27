@@ -11,7 +11,7 @@
     <!-- Enlazar CSS Floating WhatsApp -->
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/reset.css">
+    
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <link rel="stylesheet" href="css/main.css">
 
@@ -22,21 +22,39 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <header>
-        <div class="nav">
-            <h1 class="titulo">Ruta Fit</h1>
+        <div class="nav background">
+            <div class="menu__wrapper">
+                <div class="menu__bar">
+                    <div class="nav">
+                        <h1 class="titulo">Ruta Fit</h1>
+                    </div>
+                    <img class="menu-icon" src="img/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                        onclick="toggleMenu(this)">
+                    <ul class="navigation">
+                        <li>
+                            <a href="Blog.html" title="Blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#destacados" title="Productos">Productos</a>
+                        </li>
+                        <li>
+                            <a href="#Opiniones" title="Opiniones">Opiniones</a>
+                        </li>
+                        <li>
+                            <a href="#preguntas" title="Preguntas">Preguntas</a>
+                        </li>
+                        <li>
+                            <a href="#Contact" title="Contactos">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class=" nav"></div>
-        <nav>
-            <a href="Blog.html">Blog</a>
-            <a href="#destacados">Productos</a>
-            <a href="#Opiniones">Opiniones</a>
-            <a href="#preguntas">Preguntas</a>
-            <a href="#Contact">Contactos</a>
-        </nav>
     </header>
+    
+    
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a id="WABoton"
@@ -69,12 +87,7 @@
             </p>
             <a href="#Contact">Contacta Con Nosotros</a>
         </div>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/O8axbKX1JVo?start=7"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
+
     </main>
     <!-- Section 2 -->
     <section id="destacados" class="section2">
