@@ -863,6 +863,10 @@ summary:hover .expand-icon {
 
 @media screen and (min-width: 1000px) {}
 
+@media screen and (max-width: 396px) {
+  
+}
+
 @media screen and (max-width: 768px) {
 
   .navigation {
