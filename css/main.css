@@ -865,32 +865,38 @@ summary:hover .expand-icon {
 
 @media screen and (max-width: 768px) {
   main>div h1 {
-    left: 1rem;
-    top: -16rem;
+    left: 2rem;
+    top: -17rem;
+    /* height: 5rem; */
+    width: 20rem;
+    text-align: center;
+    font-size: 3rem;
   }
 
   main>div hr {
-    left: 3rem;
-    top: -17rem;
+    left: 2rem;
+    top: -18rem;
+    width: 21rem;
   }
 
   main>div p {
-    left: 0rem;
+    left: 2rem;
     /* height: 6rem; */
-    width: 25rem;
-    font-size: 1rem;
-    top: -17rem;
+    width: 21rem;
+    font-size: .8rem;
+    top: -18rem;
+    text-align: center;
   }
 
   main>div a {
-    left: 4rem;
-    top: -16rem;
+    left: 3rem;
+    top: -18rem;
   }
 
   video {
     width: 23rem;
     left: 1rem;
-    top: 2rem;
+    top: -1rem;
   }
 
   .section2 {
@@ -913,12 +919,34 @@ summary:hover .expand-icon {
     font-weight: 600;
   }
 
-  .secction-title {
+  .section-title {
+    top: 0rem;
     font-weight: 600;
   }
 
   .section_titulo p {
     font-weight: 600;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navigation--mobile {
+    top: var(--navbar-height);
+    position: absolute;
+    display: flex;
+    padding: 80px 60px;
+    min-height: 100%;
+    background-color: var(--background);
+    align-items: flex-start;
+    opacity: 0.95;
+    animation: fadein 0.3s forwards;
+    flex-direction: column;
   }
 
   @keyframes fadein {
@@ -967,6 +995,12 @@ summary:hover .expand-icon {
     width: 0;
     height: 2px;
     transition: all 0.2s ease-in-out;
+  }
+
+  .footer-top-wrapper {
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
   }
 }
 
