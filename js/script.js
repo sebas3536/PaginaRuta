@@ -125,7 +125,7 @@ const toggleMenu = () => {
   const iconName = isBurger ?
       'img/close.svg'
       :
-      'img/burger-menu.svg"';
+      'img/burger-menu.svg';
 
 
   burgerMenu.setAttribute(

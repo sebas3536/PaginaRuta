@@ -863,13 +863,122 @@ summary:hover .expand-icon {
 
 @media screen and (min-width: 1000px) {}
 
+@media screen and (max-width: 768px) {
+  main>div h1 {
+    left: 1rem;
+    top: -16rem;
+  }
+
+  main>div hr {
+    left: 3rem;
+    top: -17rem;
+  }
+
+  main>div p {
+    left: 0rem;
+    /* height: 6rem; */
+    width: 25rem;
+    font-size: 1rem;
+    top: -17rem;
+  }
+
+  main>div a {
+    left: 4rem;
+    top: -16rem;
+  }
+
+  video {
+    width: 23rem;
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .section2 {
+    height: 97rem;
+  }
+
+  .social-links {
+    top: 1rem;
+  }
+
+  .logo {
+    top: 1rem;
+  }
+
+  .contact-section p {
+    font-weight: 600;
+  }
+
+  .section4 h3 {
+    font-weight: 600;
+  }
+
+  .secction-title {
+    font-weight: 600;
+  }
+
+  .section_titulo p {
+    font-weight: 600;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    100% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - var(--navbar-height));
+    }
+  }
+
+  .navigation--mobile--fadeout {
+    animation: fadeout 300ms forwards;
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - var(--navbar-height));
+    }
+
+    100% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .navigation>li>a {
+    font-size: 30px;
+  }
+
+  .navigation>li>a:before {
+    content: '';
+    background: var(--primary-hover);
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+
+/*
 @media screen and (max-width: 396px) {
   .nav {
     padding: 20px 0;
     left: -14px;
     position: relative;
     width: 400px;
-    /* color: red; */
+    
   }
 
   .titulo {
@@ -880,14 +989,14 @@ summary:hover .expand-icon {
   .menu-icon {
     left: 1rem;
     position: relative;
-    /* color: black; */
+   
   }
 
   .header {
     width: 375px;
   }
 
-  main>div hi {
+  main>div h1 {
     font-size: 40px;
     left: 1rem;
     width: 22rem;
@@ -913,7 +1022,7 @@ summary:hover .expand-icon {
     top: -2rem;
     left: 1rem;
     width: 351px;
-    /* height: 219px; */
+    
   }
 
   .section2 {
@@ -927,7 +1036,7 @@ summary:hover .expand-icon {
 
   .social-links {
     top: 1rem;
-    /* align-items: center; */
+  
     left: 2rem;
   }
 
@@ -942,14 +1051,14 @@ summary:hover .expand-icon {
     left: -14px;
     position: relative;
     width: 400px;
-    /* color: red; */
+  
   }
 }
-
+*/
 @media screen and (max-width: 575px) {}
 
+/*
 @media screen and (max-width: 768px) {
-
   .navigation {
     display: none;
   }
@@ -961,12 +1070,10 @@ summary:hover .expand-icon {
   .navigation--mobile {
     top: var(--navbar-height);
     position: absolute;
-    /* right: 0px; */
     display: flex;
     padding: 80px 60px;
     min-height: 100%;
     background-color: var(--background);
-    /* gap: 8px; */
     align-items: flex-start;
     opacity: 0.95;
     animation: fadein 0.3s forwards;
@@ -1100,4 +1207,4 @@ summary:hover .expand-icon {
     height: 2px;
     transition: all 0.2s ease-in-out;
   }
-}
+}*/
