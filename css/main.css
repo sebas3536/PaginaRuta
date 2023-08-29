@@ -7,10 +7,10 @@
   --text-color: #172317;
   --bg-color: #fff;
 
-  --primary: #90dd6f ;
-    --primary-hover: #8acd7c;                
-    --background: #261E5A;
-    --navbar-height: 60px;
+  --primary: #90dd6f;
+  --primary-hover: #42603d;
+  --background: #261E5A;
+  --navbar-height: 60px;
 }
 
 ::selection {
@@ -23,6 +23,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -44,12 +49,14 @@ header.shadow {
   box-shadow: 0 1px 4px hsl(0 4% 14% / 10%);
   transition: 0.3s;
 }
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0;
+  padding: 35px 0;
 }
+
 nav a {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
@@ -62,6 +69,7 @@ nav a {
   position: relative;
   display: inline-block;
 }
+
 .titulo {
   width: 10rem;
   position: relative;
@@ -73,6 +81,7 @@ nav a {
   size: ledger;
   font-family: 'Poppins', sans-serif;
 }
+
 header.shadow .titulo {
   color: var(--text-color);
 }
@@ -81,7 +90,7 @@ header.shadow .titulo {
   display: flex;
   position: relative;
   flex-direction: row;
-  z-index: 2;   
+  z-index: 2;
 }
 
 .menu__bar {
@@ -104,7 +113,7 @@ header.shadow .titulo {
   width: 32px;
 }
 
-.navigation {    
+.navigation {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -112,6 +121,8 @@ header.shadow .titulo {
   gap: 30px;
   padding-right: 4rem;
   font-family: 'Oswald', sans-serif;
+  position: relative;
+  top: auto;
 }
 
 .logo {
@@ -120,26 +131,24 @@ header.shadow .titulo {
   height: 32px;
   cursor: pointer;
 }
-                  
-.navigation > li {
-display: flex;
-position: relative;
-cursor: pointer;
-font-size: 1.25rem;
+
+.navigation>li {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
 
-.navigation > li > a {
+.navigation>li>a {
   color: white;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   text-decoration: none;
   font-weight: 500;
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       var(--primary-hover),
       var(--primary-hover) 50%,
-      white 50%
-  );
+      white 50%);
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -150,7 +159,7 @@ font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
 }
 
-.navigation > li > a:before {
+.navigation>li>a:before {
   content: '';
   background: var(--primary-hover);
   display: block;
@@ -162,82 +171,61 @@ font-size: 1.25rem;
   transition: all 0.2s ease-in-out;
 }
 
-.navigation > li > a:hover {
+.navigation>li>a:hover {
   background-position: 0;
 }
 
-.navigation > li > a:hover::before{
+.navigation>li>a:hover::before {
   width: 100%;
 }
 
 @media (min-width: 600px) {
   .menu-icon {
-      display: none;
+    display: none;
   }
 }
 
 
 /*slider*/
-div#slider {
-  
+/****************************/
+.c-item {
+  height: 660px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel {
+  height: 24rem;
+}
+
+.container {
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+
+/*VIDEO*/
+video {
+  width: 600px;
+  /* height: 500px; */
   position: absolute;
-  overflow: hidden;
-}
-
-
-div#slider figure img {
-  width: 10%;
-  float: left;
-  background-position: center;
-}
-
-div#slider figure {
-  z-index: -1;
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 30s slidy infinite;
-
-}
-
-@keyframes slidy {
-  0% {
-    left: 0%;
-  }
-
-  20% {
-    left: 0%;
-  }
-
-  25% {
-    left: -100%;
-  }
-
-  45% {
-    left: -100%;
-  }
-
-  50% {
-    left: -200%;
-  }
-}
-.video{
-  position: relative;
-  right: 5rem;
-  top: .15rem;
+  left: 42rem;
+  top: -13rem;
 }
 
 /*main*/
+
 main {
+  display: flex;
   position: relative;
   width: 100%;
   margin: auto auto;
-  min-height: 100vh;
   column-gap: 3rem;
-  padding-block: min(20vh, 3rem);
+
 }
 
 .bg {
@@ -263,6 +251,8 @@ main>div h1 {
   left: 42px;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  top: -10rem;
+  width: 46rem;
 }
 
 main>div hr {
@@ -272,7 +262,8 @@ main>div hr {
   width: 33.25rem;
   border: none;
   position: relative;
-  left: 3rem;
+  left: 44px;
+  top: -10rem;
 }
 
 main>div p {
@@ -284,6 +275,17 @@ main>div p {
   left: 3rem;
   position: relative;
   width: 28rem;
+  top: -10rem;
+}
+
+main>div>a {
+  position: relative;
+  border: 2px solid #c2c2c2;
+  /* margin-top: 2.188rem; */
+  padding: 0.625rem 1.875rem;
+  /* top: 1rem; */
+  left: 3rem;
+  top: -9.5rem;
 }
 
 main a {
@@ -297,24 +299,12 @@ main a {
   transition: 0.3s ease-in-out;
 }
 
-main>div>a {
-  position: relative;
-  border: 2px solid #c2c2c2;
-  padding: 0.625rem 1.875rem;
-  top: 1rem;
-  left: 3rem;
-}
-
-main>div>a:hover {
-  border: 0.125rem solid #005baa;
-  color: #005baa;
-}
-
 /****************************/
 .section2 {
   position: relative;
   top: 1rem;
   background-image: url("Diseño1.png");
+  /*background-repeat: repeat;*/
   height: 670px;
   align-items: center;
 }
@@ -415,7 +405,7 @@ main>div>a:hover {
   backdrop-filter: blur(16px) saturate(120%);
   transition: .3s;
   color: #fff;
-  
+
 }
 
 .card:hover .details {
@@ -873,61 +863,156 @@ summary:hover .expand-icon {
 
 @media screen and (min-width: 1000px) {}
 
-@media screen and (max-width: 780px){
-  
+@media screen and (max-width: 768px) {
+
   .navigation {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
-      display: block;
+    display: block;
   }
 
   .navigation--mobile {
-      top: var(--navbar-height);
-      position: absolute;
-      right: 0px;
-      display: flex;
-      padding: 80px 60px;
-      min-height: 100%;
-      background-color: var(--background);       
-      gap: 8px;
-      flex-direction: column;
-      align-items: flex-start;
-      opacity: 0.95;
-      animation: fadein 0.3s forwards;
+    top: var(--navbar-height);
+    position: absolute;
+    /* right: 0px; */
+    display: flex;
+    padding: 80px 60px;
+    min-height: 100%;
+    background-color: var(--background);
+    /* gap: 8px; */
+    align-items: flex-start;
+    opacity: 0.95;
+    animation: fadein 0.3s forwards;
+    flex-direction: column;
   }
 
   @keyframes fadein {
-      0% {
-          opacity: 0;
-          width: 0;
-          height: 0;
-      }
-      100% {
-          opacity: 1;
-          width: 100%;
-          height: calc(100vh - var(--navbar-height));
-      }
+    0% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    100% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - var(--navbar-height));
+    }
   }
 
   .navigation--mobile--fadeout {
-      animation: fadeout 300ms forwards;
+    animation: fadeout 300ms forwards;
   }
 
   @keyframes fadeout {
-      0% {
-          opacity: 1;
-          width: 100%;
-          height: calc(100vh - var(--navbar-height));
-      }
-      100% {
-          opacity: 0;
-          width: 0;
-          height: 0;
-      }
+    0% {
+      opacity: 1;
+      width: 100%;
+      height: calc(100vh - var(--navbar-height));
+    }
+
+    100% {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
   }
 
-}
+  .titulo {
+    top: 0rem;
+    color: white;
+  }
 
-/***********************/
+  main>div h1 {
+    position: relative;
+    width: 23rem;
+    text-align: center;
+    left: 11rem;
+    top: -19rem;
+  }
+
+  main>div hr {
+    left: 6rem;
+    top: -19rem;
+  }
+
+  main>div p {
+    left: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 37rem;
+    top: -19rem;
+  }
+
+  main>div>a {
+    top: -18.5rem;
+    left: 13rem;
+  }
+
+  .menu.icon {
+    left: -98rem;
+    position: relative;
+    top: 0rem;
+  }
+
+  .section2 {
+    height: 70rem
+  }
+
+  .section-title {
+    top: 0rem;
+  }
+
+  .footer-top-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .logo {
+    width: 6rem;
+    height: 8rem;
+    position: relative;
+    top: 5rem;
+  }
+
+  .social-links {
+    position: relative;
+    top: 6rem;
+    height: 3rem;
+  }
+
+  .menu {
+    left: 8rem;
+    position: relative;
+  }
+
+  .carousel {
+    height: 23rem;
+  }
+
+  video {
+    left: 6rem;
+    top: -1rem;
+    width: 500px;
+  }
+
+  .navigation>li>a {
+    font-size: 30px;
+  }
+
+  .navigation>li>a:before {
+    content: '';
+    background: var(--primary-hover);
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+}

@@ -387,34 +387,53 @@ header.shadow .logo {
     }
 }
 
-@media(max-width: 369px){
-    .home-title{
+@media screen and (max-width: 396px) {
+    .home-title {
         font-size: 2rem;
     }
-    .home-subtitle{
+
+    .home-subtitle {
         font-size: 0.9rem;
     }
-    .home{
+
+    .home {
         min-height: 300px;
     }
-    .post-box{
+
+    .post-box {
         padding: 10px;
     }
-    .header-title{
+
+    .header-title {
         font-size: 1.4rem;
+        width: 16rem;
     }
-    .header-img{
+
+    .header-img {
         height: 240px;
+        width: 364px;
+        border-radius: 14px;
     }
-    .post-header{
+
+    .post-header {
         height: 335px;
     }
-    .post-content{
-        margin-top: 5rem !important;
+
+    .post-content {
+        margin-top: 8rem !important;
+        padding: 16px;
     }
-    .post-text{
+
+    .post-text {
         font-size: 0.875rem;
         line-height: 1.5rem;
         margin: 10px 0;
+    }
+    .category{
+        top: 7px;
+        position: relative;
+    }
+    .post-img{
+        height: 225px;
     }
 }
